@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="shortcut icon" href="buzz.png" />
+    <title>Google Buzz Analyzer</title>
+    <link href="boot/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+  </head>
+    <script type="text/javascript">
+      function autoIframe(frameId){
+        try{
+            frame = document.getElementById(frameId);
+            innerDoc = (frame.contentDocument) ? frame.contentDocument : frame.contentWindow.document;
+
+            if (innerDoc == null){
+                            // Google Chrome
+                frame.height = 15000;
+                            alert(frame.height)
+            }
+            else{
+                objToResize = (frame.style) ? frame.style : frame;
+                objToResize.height = innerDoc.body.scrollHeight + 2 + "px";
+            }
+        }
+
+        catch(err){
+                alert('Err: ' + err.message);
+            window.status = err.message;
+        }
+      }
+    </script>
+    <body>
+
+      <div class="topbar">
+        <div class="topbar-inner">
+          <div class="container-fluid">
+          <img src="buzz.png" width="35" height="35" />
+          <a class="brand">Google Buzz Analyzer</a>
+          <ul class="nav">
+            <li><a href="index.html">Top Followers</a></li>
+            <li class="active"><a href="./followers.html">Followers</a></li>
+            <li><a href="posts.html">Posts</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid ">
+
+      <div class="content span13 well">
+          <h5>Followers Statistics</h5>
+          <div class="span6" >
+              <iframe src="blocks/followers_block_1.html" frameborder="0" scrolling="no" class="span6" id=frm1 name=frm1 width=100% onload="if (window.parent &amp;&amp; window.parent.autoIframe) {window.parent.autoIframe('frm1');}"></iframe>
+          </div>
+
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+          <div class="span6" >
+              <iframe src="blocks/followers_block_2.html" frameborder="0" scrolling="no" class="span6" id=frm2 name=frm2 width=100% onload="if (window.parent &amp;&amp; window.parent.autoIframe) {window.parent.autoIframe('frm2');}"></iframe>
+          </div>
+
+      </div>
+  </div>
+
+
+  </body>
+
+</html>

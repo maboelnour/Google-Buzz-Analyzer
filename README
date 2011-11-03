@@ -1,0 +1,16 @@
+How To Run:
+
+- Download your buzz data from Google Takout from this link ==> https://www.google.com/takeout/?pli=1#custom:buzz
+- Extract the Downloaded Folder.
+- Open the extracted Folder you will find a folder named "buzz"
+- Copy that folder "buzz" here inside this folder, besides the "Analyze.rb" file.
+
+- To install Dependencies type in your Terminal after moving to this folder (the terminal will ask for your password):
+        sh install.sh
+
+- TO Run:
+        sudo chmod 777 Analyze.rb
+    Then:
+        ./Analyze.rb
+
+- Open the file named "index.html" and enjoy with your results :)

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="shortcut icon" href="buzz.png" />
+    <title>Google Buzz Analyzer</title>
+    <link href="boot/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+  </head>
+    <body>
+    <script ID=clientEventHandlersJS language=javascript>
+      function frm_onload(frmname)
+      {
+        frmname.frameElement.height = frmname.document.body.scrollHeight+5;
+      }
+    </script>
+
+      <div class="topbar">
+        <div class="topbar-inner">
+          <div class="container-fluid">
+          <img src="buzz.png" width="35" height="35" />
+          <a class="brand">Google Buzz Analyzer</a>
+          <ul class="nav">
+            <li><a href="index.html">Top Followers</a></li>
+            <li><a href="followers.html">Followers</a></li>
+            <li><a href="posts.html">Posts</a></li>
+            <li class="active"><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-fluid">
+
+      <div class="content span13 well">
+
+          <div class="span13" >
+            <div class="span6">
+            <strong>To run this Tool : <br />
+            <ul>
+
+            <li>Download your buzz data from Google Takout from this <a href="https://www.google.com/takeout/?pli=1#custom:buzz">link</a></li>
+            <li>Extract the Downloaded Folder.</li>
+            <li>Open the extracted Folder you will find a folder named "buzz"</li>
+            <li>Copy that folder "buzz" here inside this folder, besides the "Analyze.rb" file.</li><br />
+            <li>To install Dependencies type in your Terminal after moving to this folder (the terminal will ask for your password):</li>
+            sh install.sh<br />
+
+            <li>To Run:</li>
+              sudo chmod 777 Analyze.rb
+            <li>Then:</li>
+            ./Analyze.rb
+
+            <li>Open the file named "index.html" and enjoy with your results :)</li>
+            <ul>
+            </strong>
+
+            </div>
+            <div class="span6">
+              <address><strong>For Feedback & Comments</strong> : <br /><br />
+              E-mail: <a mailto="mhm.aboelnour@gmail.com">mhm.aboelnour@gmail.com</a></address>
+              Blog: <a href="http://maboelnour.wordpress.com/">http://maboelnour.wordpress.com</a>
+            </div>
+          </div>
+      </div>
+  </div>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="shortcut icon" href="buzz.png" />
+    <title>Google Buzz Analyzer</title>
+    <link href="boot/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+  </head>
+    <script type="text/javascript">
+      function autoIframe(frameId){
+        try{
+            frame = document.getElementById(frameId);
+            innerDoc = (frame.contentDocument) ? frame.contentDocument : frame.contentWindow.document;
+
+            if (innerDoc == null){
+                            // Google Chrome
+                frame.height = document.all[frameId].clientHeight + document.all[frameId].offsetHeight + document.all[frameId].offsetTop;
+            }
+            else{
+                objToResize = (frame.style) ? frame.style : frame;
+                objToResize.height = innerDoc.body.scrollHeight + 2 + "px";
+            }
+        }
+
+        catch(err){
+                alert('Err: ' + err.message);
+            window.status = err.message;
+        }
+      }
+    </script>
+
+  <body>
+
+      <div class="topbar">
+        <div class="topbar-inner">
+          <div class="container-fluid">
+          <img src="buzz.png" width="35" height="35" />
+          <a class="brand">Google Buzz Analyzer</a>
+          <ul class="nav">
+            <li><a href="index.html">Top Followers</a></li>
+            <li><a href="followers.html">Followers</a></li>
+            <li class="active"><a href="posts.html">Posts</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="content span13 well">
+
+        <div class="span12">
+          <h5>Your Numbers</h5>
+          <iframe src="blocks/numbers_block.html" frameborder="0" scrolling="no" class="span6" width=100% height=100 ></iframe>
+        </div>
+
+        <div class="span6">
+          <h5>Posts</h5>
+          <table class="zebra-striped">
+              <iframe src="blocks/posts_block.html" frameborder="0" scrolling="no" class="span6" height="532" width=100% ></iframe>
+          </table>
+        </div>
+
+        <div class="span6">
+          <h5>Comments</h5>
+          <table class="zebra-striped">
+              <iframe src="blocks/comments_block.html" frameborder="0" scrolling="no" class="span6" height="532" width=100% ></iframe>
+          </table>
+        </div>
+      </div>
+
+      <div class="content span13 well">
+        <div class="span12">
+          <h5>Top Liked Posts</h5>
+          <div class="span12">
+            <iframe src="blocks/top_liked_posts.html" frameborder="0" scrolling="yes" class="span12" width=100% height="450"> </iframe>
+          </div>
+      </div>
+
+        <div class="span12">
+          <h5>Top Commented Posts</h5>
+          <div class="span12">
+            <iframe src="blocks/top_commented_posts.html" frameborder="0" scrolling="yes" class="span12" width=100% height="450"></iframe>
+          </div>
+        </div>
+
+      </div>
+</div>
